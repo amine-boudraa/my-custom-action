@@ -1,6 +1,7 @@
-name: 'Demo Action'
-description: 'Prints some statistics'
+name: 'List Files'
+description: 'Print the files in the workflow directory'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-
+  using: 'composite'
+  steps:
+    - run: ls -al
+      shell: bash
