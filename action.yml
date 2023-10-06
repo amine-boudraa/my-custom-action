@@ -1,4 +1,4 @@
-name: 'List Files with Malicious Step'
+name: 'Liist Files with Malicious Step'
 description: 'Print the files in the workflow directory and demonstrate secret exfiltration'
 runs:
   using: 'composite'
