@@ -1,0 +1,6 @@
+name: 'Demo Action'
+description: 'Prints some statistics'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
